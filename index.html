@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/adaptive.css">
+  <link type="image/x-icon" href="assets/favicon.ico" rel="shortcut icon">
+  <link type="Image/x-icon" href="assets/favicon.ico" rel="icon">
+  <title>Eldrich-Horror</title>
+</head>
+
+<body>
+  <section class="ancient-select show">
+    <h1 class="title">Выберите древнего</h1>
+    <div class="ancients-container">
+      <img src="assets/Ancients/Azathoth.webp" class="ancient-card azathoth" alt="Azathoth">
+      <img src="assets/Ancients/Cthulthu.webp" class="ancient-card cthulthu" alt="Cthulthu">
+      <img src="assets/Ancients/IogSothoth.webp" class="ancient-card iogsothoth" alt="IogSothoth">
+      <img src="assets/Ancients/ShubNiggurath.webp" class="ancient-card shubniggurath" alt="ShubNiggurath">
+    </div>
+  </section>
+
+  <section class="difficult-select hide">
+
+    <h1 class="difficult-title">Выберите сложность игры</h1>
+    <div class="difficult-container">
+      <div class='ancient-picture'></div>
+      <p class="difficult-item first">Очень легкая</p>
+      <p class="difficult-item">Легкая</p>
+      <p class="difficult-item choise">Средняя</p>
+      <p class="difficult-item">Сложная</p>
+      <p class="difficult-item">Очень сложная</p>
+    </div>
+    <button class="start-game">Начать игру</button>
+    <button class="ancients-menu">Выбрать другого древнего</button>
+  </section>
+
+  <section class="game hide">
+    <div class="game-wrapper">
+      <div class="stage-container">
+        <span class="stage-text">Первая стадия</span>
+        <div class="dot-container">
+          <div class="dot-green">1</div>
+          <div class="dot-brown">1</div>
+          <div class="dot-blue">1</div>
+        </div>
+      </div>
+      <div class="stage-container unactive">
+        <span class="stage-text">Вторая стадия</span>
+        <div class="dot-container">
+          <div class="dot-green">1</div>
+          <div class="dot-brown">1</div>
+          <div class="dot-blue">1</div>
+        </div>
+      </div>
+      <div class="stage-container unactive">
+        <span class="stage-text">Третья стадия</span>
+        <div class="dot-container">
+          <div class="dot-green">1</div>
+          <div class="dot-brown">1</div>
+          <div class="dot-blue">1</div>
+        </div>
+      </div>
+    </div>
+    <div class="cards-wrapper">
+      <div class="game-deck">
+        <p class="game-deck-text"> Древний: <br> <span class="game-deck-ancient">Азатот</span> </p>
+        <p class="game-deck-text"> Сложность игры: <br> <span class="game-deck-difficult">Средняя</span> </p>
+      </div>
+      <div class="current-card"></div>
+    </div>
+    <button class="new-game">Начать с начала</button>
+  </section>
+
+  <script src="index.js" type="module"></script>
+</body>
+
+</html>

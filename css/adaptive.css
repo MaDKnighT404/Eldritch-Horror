@@ -1,0 +1,147 @@
+@media (max-width: 1990px) {
+  .ancient-card {
+    width: calc(240px + (300 - 240) * ((100vw - 320px) / (1990 - 320)));
+    height: calc(320px + (420 - 320) * ((100vw - 320px) / (1990 - 320)));
+  }
+
+  .ancients-select {
+    font-size: calc(25px + (70 - 25) * ((100vw - 320px) / (1990 - 320)));
+  }
+}
+
+@media (max-width: 1440px) {
+  .ancient-card {
+    width: calc(90px + (300 - 90) * ((100vw - 320px) / (1440 - 320)));
+    height: calc(140px + (420 - 140) * ((100vw - 320px) / (1440 - 320)));
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .title {
+    margin-top: 30px;
+  }
+
+  .ancient-card:hover {
+    border: 5px solid purple;
+    width: 300px;
+    height: 400px;
+    margin-top: -20px;
+  }
+
+  .difficult-title {
+    margin-top: 20px;
+  }
+
+  .difficult-container {
+    margin-top: 7px;
+  }
+
+  .start-game {
+    margin-top: 170px;
+  }
+
+  .ancients-menu {
+    margin-top: 5px;
+  }
+
+  .game-wrapper {
+    scale: 0.6;
+    margin-top: -20px;
+  }
+
+  .cards-wrapper {
+    margin-top: -120px;
+  }
+
+  .new-game {
+    margin-top: 0px;
+  }
+
+}
+
+
+@media (max-width: 420px) {
+
+  .title {
+    font-size: 30px;
+
+  }
+
+  .ancients-container {
+    flex-direction: column;
+    align-items:center;
+
+  }
+
+  .ancient-card {
+    width: 300px;
+    height: 400px;
+  }
+
+  .ancient-card:first-child {
+  margin-top: 900px;
+  }
+
+  .ancient-card:first-child:hover {
+    width: 350px;
+    height: 470px;
+    margin-top: 940px;
+  }
+
+  .ancient-card:hover {
+    width: 350px;
+    height: 470px;
+    margin-top: 5px;
+  }
+
+
+
+  .difficult-title {
+    font-size: 30px;
+  }
+
+  .difficult-container {
+    width: 375px;
+  }
+
+  .ancient-picture {
+    left:4px;
+    width: calc(314px + (420 - 320) * ((100vw - 320px) / (420 - 320)));
+    background-size: cover;
+    background-position:center;
+  }
+
+  .difficult-item {
+ width: auto;
+  }
+
+  .game-wrapper {
+    width: auto;
+  }
+
+  .game-deck {
+    height: 250px;
+  }
+
+  .current-card {
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .game-deck-text  {
+    font-size: 15px;
+  }
+
+  .game-deck-ancient {
+    line-height: 35px;
+  }
+
+  .game-deck-difficult {
+    line-height: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    white-space: nowrap
+  }
+}

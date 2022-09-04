@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Oxygen", sans-serif;
+}
+
+body {
+  min-width: 320px;
+  background-image: url(../assets/home.webp);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: rgb(222, 209, 209);
+  text-shadow: 1px 1px 1px #000;
+  font-size: 35px;
+  position: relative;
+}
+
+/* древние */
+
+.ancient-select {
+  transition: 0.2s ease-out;
+  position: absolute;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  margin: 10px 0 100px;
+}
+
+.ancients-container {
+  display: flex;
+  justify-content: center;
+  height: 580px;
+  flex-wrap: nowrap;
+}
+
+.ancient-card {
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 430px;
+  height: 560px;
+}
+
+.ancient-card:hover {
+  border: 5px solid purple;
+  width: 550px;
+  height: 700px;
+  margin-top: -20px;
+}
+
+/* сложность */
+
+.difficult-select {
+  transition: 0.2s ease-out;
+  position: absolute;
+  width: 100%;
+}
+
+.difficult-title {
+  text-align: center;
+
+}
+
+.difficult-container {
+  width: 640px;
+  margin: 100px auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.ancient-picture {
+  position: absolute;
+  left: 100px;
+  z-index: -1;
+  width: 440px;
+  height: 575px;
+  background-repeat: no-repeat;
+}
+
+.ancient-picture:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(128, 0, 128, 0.333);
+  box-shadow: 0px 0px 5px 4px rgba(73, 2, 84, 0.62);
+}
+
+.difficult-item {
+  text-align: center;
+  margin: 5px auto;
+  cursor: pointer;
+  width: 434px;
+  padding: 5px 5px 5px 5px;
+  color: #b9b9b9;
+}
+
+.difficult-item:hover {
+  color: #fff;
+}
+
+.first {
+  margin-top: 100px;
+}
+
+.start-game {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 200px auto 0;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  background: rgb(108, 36, 204);
+  color: #dbd9d9;
+  box-shadow: 0px 0px 5px 3px rgba(43, 4, 54, 0.62);
+  transition: 0.2s ease;
+}
+
+.start-game:hover {
+  color: #fff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 2px 1px rgba(43, 4, 54, 0.62);
+}
+
+.ancients-menu,
+.new-game {
+  display: block;
+  margin: 90px auto;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  background: rgb(55, 15, 108);
+  color: #dbd9d9;
+  box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.62);
+
+  transition: 0.2s ease;
+}
+
+.ancients-menu:hover,
+.new-game:hover {
+  color: #fff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 2px 1px rgba(43, 4, 54, 0.62);
+}
+
+.choise {
+  color: #fff;
+  transition: text-shadow 0.3s ease-in-out;
+  padding: 5px;
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+}
+
+/* game */
+
+.game-wrapper {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 70px auto 100px;
+}
+
+.stage-text {
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.dot-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.unactive {
+  opacity: 0.3;
+  transition: 0.3s ease-in;
+}
+
+.dot-green,
+.dot-brown,
+.dot-blue {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot-green {
+  background: green;
+}
+
+.dot-brown {
+  background: rgb(113, 29, 29);
+}
+
+.dot-blue {
+  background: blue;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.game-deck,
+.current-card {
+  width: 266px;
+  height: 400px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 4px rgba(67, 5, 91, 0.62);
+  transition: 0.2s ease-in-out;
+}
+
+.game-deck {
+  background: url(../assets/mythicCardBackground.webp) no-repeat;
+  background-size: cover;
+}
+
+.current-card {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.5);
+  cursor: auto;
+}
+
+.game-deck-text {
+  text-align: center;
+  margin: 30px;
+  user-select: none;
+  color:rgb(224, 222, 223);
+  text-shadow: 0 0 10px #FFFFFF;
+
+}
+
+.game-deck-ancient {
+  color:#fff;
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -5px 20px #ff8000, 0 0px 20px #F00;
+  line-height: 35px;
+}
+
+.game-deck-difficult {
+  color:#fff;
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -5px 20px #ff8000, 0 0px 20px #F00;
+  line-height: 35px;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
